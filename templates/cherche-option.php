@@ -19,7 +19,7 @@
 		</form>
 	</center>
 </div>
-yjtutuytyujt
+
 <style type="text/css">
 	
 /** Structure de la Page **/
@@ -58,7 +58,8 @@ yjtutuytyujt
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  width: 45%;
+  width: 80%;
+  right: 10px; 
   padding: 11px 7px;
   padding-right: 43px;
   background-color: #fff;
@@ -78,18 +79,18 @@ yjtutuytyujt
   height: 50px;
 }
 
-.searchfield:focus {
+/*.searchfield:focus {
   width: 100%;
   color: #666;
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
 }
-
+*/
 #searchbtn {
   position: absolute;
-  right: 282px;
-	top: -16px;
+  right: 96px;
+	top: -11px;
   height: 32px;
   width: 32px;
   border: 0;
@@ -108,9 +109,9 @@ yjtutuytyujt
 	filter: alpha(opacity=90);
 	opacity: 0.9;  
 }
-.searchfield:focus + #searchbtn {
+/*.searchfield:focus + #searchbtn {
   right: 10px; 
-}
+}*/
 
 /** Animation Expandable en Javascript **/
 .searchfieldjs {
@@ -153,14 +154,22 @@ yjtutuytyujt
   z-index: -1;
 }*/
 label {
-  position: relative;
-  display: block;
-  padding: 0 0 0 1em;
-  background: #16a085;
-  font-weight: bold;
-  line-height: 3;
-  cursor: pointer;
+ color: black;
+ position: relative;
+ display: block;
+ padding: 0 0 0 1em;
+/* background: #16a085; */
+font-weight: bold;
+line-height: 3;
+cursor: pointer;
+right: -27%;
+  
+
 }
+label:before{
+
+}
+
 .blue label {
   background: #2980b9;
 }
