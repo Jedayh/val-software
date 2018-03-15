@@ -2,20 +2,21 @@
 	<center>
 		<form id="searchform" name="searchform" method="get" action="index.html">
 		  <div class="fieldcontainer">
-		    <input type="text" name="s" id="s" class="searchfield" placeholder="Recherche de Formation" tabindex="1">
-		    <input type="submit" name="searchbtn" id="searchbtn" value="">
+		    <input type="text" name="s" id="s" class="searchfield" placeholder="Nom ou domaine de la formation souhaitée..." tabindex="1">
+		    <span id="searchbtn"></span>
 		  </div>
 		  <div class="wrapper">
 		  <div class="half">
 		    <div class="tab">
 		      <input id="tab-one" type="checkbox" name="tabs">
-		      <label for="tab-one">Afficher plus de critères</label>
+		      <label class="lab_" for="tab-one">Afficher plus de critères</label>
 		      <div class="tab-content">
 		        
 		      </div>
 		    </div>
 		  </div>
 		</div>
+		<button type="submit" class="btn btn_subs" name="sub_">RECHERCHE</button>
 		</form>
 	</center>
 </div>
@@ -41,8 +42,8 @@
 
 /** Formulaire de Recherche **/
 #searchform, #searchform2 {
-  display: block;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+    margin-top: -40px;
 }
 
 .fieldcontainer {
@@ -57,38 +58,24 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  width: 45%;
+  width: 89%;
   padding: 11px 7px;
   padding-right: 43px;
-  background-color: #fff;
+  background-color: rgba(236, 150, 49, 0.3215686274509804) !important;
   font-size: 1.6em;
   color: #ccc;
-  border: 1px solid #c8c8c8;
-  border-bottom-color: #d2e2e7;
+  border: 1px solid rgba(236, 150, 49, 0.3215686274509804) !important;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;  
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  transition: all 0.4s linear;
   height: 50px;
 }
 
-.searchfield:focus {
-  width: 100%;
-  color: #666;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
-}
 
 #searchbtn {
   position: absolute;
-  right: 282px;
-	top: -16px;
+  right: 72px;
+	top: 10px;
   height: 32px;
   width: 32px;
   border: 0;
@@ -103,41 +90,6 @@
   -moz-transition: all 0.4s linear;
   transition: all 0.4s linear;
 }
-#searchbtn:hover, #searchbtn:focus, #search2btn:hover, #search2btn:focus {
-	filter: alpha(opacity=90);
-	opacity: 0.9;  
-}
-.searchfield:focus + #searchbtn {
-  right: 10px; 
-}
-
-/** Animation Expandable en Javascript **/
-.searchfieldjs {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  width: 45%;
-  padding: 11px 7px;
-  padding-right: 43px;
-  background-color: #fff;
-  border: 1px solid #c8c8c8;
-  color: #ccc;
-  font-size: 1.6em;
-  border-bottom-color: #d2e2e7;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
-}
-.searchfieldjs:focus {
-  color: #666;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 0 0 6px #e0e0e0;
-}
 /* Acordeon styles */
 .tab {
   position: relative;
@@ -151,16 +103,20 @@
   opacity: 0;
   z-index: -1;
 }*/
-label {
-  position: relative;
+.lab_ {
   display: block;
-  padding: 0 0 0 1em;
-  background: #16a085;
-  font-weight: bold;
-  line-height: 3;
-  cursor: pointer;
+    padding: 0 0 0 1em;
+    background: transparent;
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+    color: #6b6363;
+    width: 21%;
+    float: right;
+    position: relative;
+    right: 106px;
 }
-.blue label {
+.blue .lab_ {
   background: #2980b9;
 }
 .tab-content {
@@ -182,7 +138,7 @@ input:checked ~ .tab-content {
   max-height: 10em;
 }
 /* Icon */
-label::after {
+.lab_::after {
   position: absolute;
   right: 0;
   top: 0;
@@ -195,20 +151,31 @@ label::after {
   -o-transition: all .35s;
   transition: all .35s;
 }
-input[type=checkbox] + label::after {
+input[type=checkbox] + .lab_::after {
   content: "+";
 }
-input[type=radio] + label::after {
+input[type=radio] + .lab_::after {
   content: "\25BC";
 }
-input[type=checkbox]:checked + label::after {
+input[type=checkbox]:checked + .lab_::after {
   transform: rotate(315deg);
 }
-input[type=radio]:checked + label::after {
+input[type=radio]:checked + .lab_::after {
   transform: rotateX(180deg);
 }
 #tab-one{
 	display: none;
+}
+.btn_subs{
+	background: #ff8a00;
+    border: none;
+    padding: 9px;
+    width: 17%;
+    color: #FFF;
+    font-size: 21px;
+    float: left;
+    position: relative;
+    left: 125px;
 }
 
 </style>
