@@ -20,6 +20,7 @@
 		</form>
 	</center>
 </div>
+
 <style type="text/css">
 	
 /** Structure de la Page **/
@@ -58,7 +59,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
-  width: 89%;
+  width: 80%;
+  right: 10px; 
   padding: 11px 7px;
   padding-right: 43px;
   background-color: rgba(236, 150, 49, 0.3215686274509804) !important;
@@ -71,26 +73,44 @@
   height: 50px;
 }
 
-
 #searchbtn {
-  position: absolute;
-  right: 72px;
-	top: 10px;
-  height: 32px;
-  width: 32px;
-  border: 0;
-  cursor: pointer;
-  zoom: 1;
+	position: absolute;
+	height: 32px;
+	width: 32px;
+	border: 0;
+	cursor: pointer;
+	zoom: 1;
 	filter: alpha(opacity=65);
 	opacity: 0.65;
-  background: transparent url('<?php echo site_url("/wp-content/themes/thegem/")?>images/magnifier.png') top left no-repeat;
-  background-size: 32px;
-  
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+	background: transparent url('<?php echo site_url("/wp-content/themes/thegem/")?>images/magnifier.png') top left no-repeat;
+	background-size: 32px;
+	top: 8px;
+	right: 129px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
-/* Acordeon styles */
+
+.searchfieldjs {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 45%;
+  padding: 11px 7px;
+  padding-right: 43px;
+  background-color: #fff;
+  border: 1px solid #c8c8c8;
+  color: #ccc;
+  font-size: 1.6em;
+  border-bottom-color: #d2e2e7;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 0 0 6px #f0f0f0;
+}
 .tab {
   position: relative;
   margin-bottom: 1px;
@@ -98,11 +118,6 @@
   color: #fff;
   overflow: hidden;
 }
-/*input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}*/
 .lab_ {
   display: block;
     padding: 0 0 0 1em;
@@ -114,9 +129,16 @@
     width: 21%;
     float: right;
     position: relative;
-    right: 106px;
+    right: 158px;
 }
 .blue .lab_ {
+
+}
+label:before{
+
+}
+
+.blue label {
   background: #2980b9;
 }
 .tab-content {
@@ -175,7 +197,7 @@ input[type=radio]:checked + .lab_::after {
     font-size: 21px;
     float: left;
     position: relative;
-    left: 125px;
+    left: 176px;
 }
 
 </style>
